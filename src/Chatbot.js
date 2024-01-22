@@ -6,12 +6,14 @@ const Chatbot = () => {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([]);
 
-const chatWithGPT3 = async (userInput) => {
+
+  const chatWithGPT3 = async (userInput) => {
     const apiEndpoint = 'https://api.openai.com/v1/engines/davinci-codex/completions';
     const headers = {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer YOUR_OPENAI_API_KEY`
+      'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`
     };
+
 
     const data = {
       prompt: userInput,

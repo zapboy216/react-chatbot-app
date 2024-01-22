@@ -5,7 +5,7 @@ import Chatbot from "./Chatbot";
 function App() {
   return (
     <div>
-      <h1>AI Chatbot</h1>
+      <h1>AI Translate your Language</h1>
       <Chatbot />
     </div>
   );
